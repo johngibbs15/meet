@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1677531103639" clover="3.2.0">
+  <project timestamp="1677531103639" name="All files">
+    <metrics statements="30" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="12" elements="45" coveredelements="36" complexity="0" loc="30" ncloc="30" packages="1" files="7" classes="7"/>
+    <file name="App.js" path="/Users/johngibbs15/Code/career-foundry-projects/meet/src/App.js">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="2" type="stmt"/>
+    </file>
+    <file name="CitySearch.js" path="/Users/johngibbs15/Code/career-foundry-projects/meet/src/CitySearch.js">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="15" count="4" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="29" count="8" type="stmt"/>
+      <line num="39" count="6" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+    </file>
+    <file name="Event.js" path="/Users/johngibbs15/Code/career-foundry-projects/meet/src/Event.js">
+      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+    </file>
+    <file name="EventList.js" path="/Users/johngibbs15/Code/career-foundry-projects/meet/src/EventList.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+    </file>
+    <file name="NumberOfEvents.js" path="/Users/johngibbs15/Code/career-foundry-projects/meet/src/NumberOfEvents.js">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="7" count="2" type="stmt"/>
+    </file>
+    <file name="api.js" path="/Users/johngibbs15/Code/career-foundry-projects/meet/src/api.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="8" type="stmt"/>
+      <line num="11" count="4" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+    </file>
+    <file name="mock-data.js" path="/Users/johngibbs15/Code/career-foundry-projects/meet/src/mock-data.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="3" type="stmt"/>
+      <line num="86" count="3" type="stmt"/>
+      <line num="90" count="3" type="stmt"/>
+    </file>
+  </project>
+</coverage>
