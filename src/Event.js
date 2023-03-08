@@ -1,5 +1,3 @@
-// src/Event.js
-
 import React, { Component } from 'react';
 
 class Event extends Component {
@@ -9,23 +7,26 @@ class Event extends Component {
             collapsed: !prevState.collapsed,
         }));
     };
+
     render() {
-        const event = this.props;
+        const { event } = this.props;
         const { collapsed } = this.state;
+
         return (
             <div className="Event">
-                <h2 class="summary">{event.summary}</h2>
-                {console.log(event)}
-                <p class="date">{new Date(event.start.dateTime).toString()}</p>
-                <p class="location">{`@${event.location} | ${event.summary}`}</p>
+                <h2 className="summary">{event.summary}</h2>
+                <p className="date">{event.start.dateTime}</p>
+                <p className="location">{`@${event.location}`}</p>
+                <button className="details-button" onClick={this.toggleDetails}>
+                    {collapsed ? 'show' : 'hide'} details
+                </button>
                 {!collapsed && (
                     <div className="details">
-                        <h3 class="summary">About event:</h3>
-                        <a class="link" href={event.htmlLink}>
-                            See details on google calendar
+                        <h3 className="about">About this event:</h3>
+                        <a className="link" href={event.htmlLink}>
+                            See details on Google Calendar
                         </a>
-                        <p class="about">{event.description}</p>
-                        <button class="hide">hide details</button>
+                        <p className="description">{event.description}</p>
                     </div>
                 )}
             </div>
