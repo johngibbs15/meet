@@ -3,9 +3,11 @@ import { shallow } from 'enzyme';
 import NumberOfEvents from '../NumberOfEvents';
 
 describe('<NumberOfEvents /> component', () => {
-    let NumberOfEventsWrapper = shallow(<NumberOfEvents />);
+    let NumberOfEventsWrapper;
     beforeAll(() => {
-        NumberOfEventsWrapper = shallow(<NumberOfEvents />);
+        NumberOfEventsWrapper = shallow(
+            <NumberOfEvents updateEvents={() => {}} />
+        );
     });
 
     test('renders the component', () => {
