@@ -5,6 +5,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
+import { OfflineAlert } from './alert';
 
 class App extends Component {
     state = {
@@ -61,6 +62,11 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <div>
+                    {!navigator.onLine && (
+                        <OfflineAlert text="You are offline. Events may not be updated." />
+                    )}
+                </div>
                 <CitySearch
                     locations={this.state.locations}
                     updateEvents={this.updateEvents}
