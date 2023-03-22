@@ -6,6 +6,8 @@ To build a serverless, progressive web application (PWA) with React using a
 test-driven development (TDD) technique. The application uses the Google
 Calendar API to fetch upcoming events
 
+App is avalaible here: https://johngibbs15.github.io/meet/
+
 ## Key Features
 
 -   Filter events by city.
@@ -14,6 +16,16 @@ Calendar API to fetch upcoming events
 -   Use the app when offline.
 -   Add an app shortcut to the home screen.
 -   View a chart showing the number of upcoming events by city
+
+## How to Run
+
+1. Clone repository using command git clone https://github.com/johngibbs15/meet.git
+
+2. Install dependencies using commands npm install
+
+3. Run the app using npm run start
+
+4. After this, app should be available in the browser at http://localhost:3000.
 
 ## Feature Scenarios
 
