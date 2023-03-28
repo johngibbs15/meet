@@ -1,4 +1,13 @@
 import React, { Component } from 'react';
+import {
+    ScatterChart,
+    CartesianGrid,
+    XAxis,
+    YAxis,
+    Tooltip,
+    Scatter,
+    ResponsiveContainer,
+} from 'recharts';
 import './App.css';
 import './nprogress.css';
 import EventList from './EventList';
@@ -41,6 +50,19 @@ class App extends Component {
     componentWillUnmount() {
         this.mounted = false;
     }
+
+    getData = () => {
+        const { locations, events } = this.state;
+        const data = locations.map((location) => {
+            const number = events.filter(
+                (event) => event.location === location
+            ).length;
+            const city = location.split(', ').shift();
+            return { city, number };
+        });
+        console.log(data);
+        return data;
+    };
 
     updateEvents = (location, inputNumber) => {
         const { eventCount, selectedLocation } = this.state;
@@ -88,6 +110,34 @@ class App extends Component {
                     updateEvents={this.updateEvents}
                 />
                 <NumberOfEvents updateEvents={this.updateEvents} />
+                <h4>Events in each city</h4>
+                <ResponsiveContainer height={400}>
+                    <ScatterChart
+                        width={400}
+                        height={400}
+                        margin={{
+                            top: 20,
+                            right: 20,
+                            bottom: 20,
+                            left: 20,
+                        }}
+                    >
+                        <CartesianGrid />
+                        <XAxis
+                            type="category"
+                            dataKey="city"
+                            name="city"
+                            unit="cm"
+                        />
+                        <YAxis
+                            type="number"
+                            dataKey="number"
+                            name="number of events"
+                        />
+                        <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+                        <Scatter data={this.getData()} fill="#3fc" />
+                    </ScatterChart>
+                </ResponsiveContainer>
                 <EventList events={this.state.events} />
                 <WelcomeScreen
                     showWelcomeScreen={this.state.showWelcomeScreen}

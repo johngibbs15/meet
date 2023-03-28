@@ -19,7 +19,7 @@ const credentials = {
     auth_uri: 'https://accounts.google.com/o/oauth2/auth',
     token_uri: 'https://oauth2.googleapis.com/token',
     auth_provider_x509_cert_url: 'https://www.googleapis.com/oauth2/v1/certs',
-    redirect_uris: ['https://johngibbs15.github.io/meet/'],
+    redirect_uris: ['https://johngibbs15.github.io/meet'],
     javascript_origins: [
         'https://johngibbs15.github.io',
         'http://localhost:3000',
@@ -55,7 +55,7 @@ module.exports.getAuthURL = async () => {
     return {
         statusCode: 200,
         headers: {
-            'Access-Control-Allow-Origin': 'https://johngibbs15.github.io',
+            'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify({
             authUrl: authUrl,
@@ -90,8 +90,7 @@ module.exports.getAccessToken = async (event) => {
             return {
                 statusCode: 200,
                 headers: {
-                    'Access-Control-Allow-Origin':
-                        'https://johngibbs15.github.io',
+                    'Access-Control-Allow-Origin': '*',
                 },
                 body: JSON.stringify(token),
             };
@@ -138,8 +137,7 @@ module.exports.getCalendarEvents = async (event) => {
             return {
                 statusCode: 200,
                 headers: {
-                    'Access-Control-Allow-Origin':
-                        'https://johngibbs15.github.io',
+                    'Access-Control-Allow-Origin': '*',
                 },
                 body: JSON.stringify({ events: results.data.items }),
             };
