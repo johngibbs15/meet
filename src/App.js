@@ -13,6 +13,7 @@ import './nprogress.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import EventGenre from './EventGenre';
 import WelcomeScreen from './WelcomeScreen';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import { OfflineAlert } from './alert';
@@ -111,6 +112,7 @@ class App extends Component {
                 />
                 <NumberOfEvents updateEvents={this.updateEvents} />
                 <h4>Events in each city</h4>
+                <EventGenre events={this.state.events} />
                 <ResponsiveContainer height={400}>
                     <ScatterChart
                         width={400}
