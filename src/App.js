@@ -112,8 +112,10 @@ class App extends Component {
                 />
                 <NumberOfEvents updateEvents={this.updateEvents} />
                 <h4>Events in each city</h4>
-                <EventGenre events={this.state.events} />
-                <ResponsiveContainer height={400}>
+                <ResponsiveContainer
+                    height={400}
+                    style={{ background: 'white', borderRadius: '20px' }}
+                >
                     <ScatterChart
                         width={400}
                         height={400}
@@ -140,6 +142,7 @@ class App extends Component {
                         <Scatter data={this.getData()} fill="#3fc" />
                     </ScatterChart>
                 </ResponsiveContainer>
+                <EventGenre events={this.state.events} />
                 <EventList events={this.state.events} />
                 <WelcomeScreen
                     showWelcomeScreen={this.state.showWelcomeScreen}
