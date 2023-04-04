@@ -102,6 +102,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div>
+                    <h1>Meet App</h1>
                     {!navigator.onLine && (
                         <OfflineAlert text="You are offline. Events may not be updated." />
                     )}
@@ -117,6 +118,9 @@ class App extends Component {
                         background: 'white',
                         borderRadius: '20px',
                         margin: '5px 0',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
                     }}
                 >
                     <ResponsiveContainer height={400}>
