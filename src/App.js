@@ -112,37 +112,44 @@ class App extends Component {
                 />
                 <NumberOfEvents updateEvents={this.updateEvents} />
                 <h4>Events in each city</h4>
-                <ResponsiveContainer
-                    height={400}
-                    style={{ background: 'white', borderRadius: '20px' }}
+                <div
+                    style={{
+                        background: 'white',
+                        borderRadius: '20px',
+                        margin: '5px 0',
+                    }}
                 >
-                    <ScatterChart
-                        width={400}
-                        height={400}
-                        margin={{
-                            top: 20,
-                            right: 20,
-                            bottom: 20,
-                            left: 20,
-                        }}
-                    >
-                        <CartesianGrid />
-                        <XAxis
-                            type="category"
-                            dataKey="city"
-                            name="city"
-                            unit="cm"
-                        />
-                        <YAxis
-                            type="number"
-                            dataKey="number"
-                            name="number of events"
-                        />
-                        <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                        <Scatter data={this.getData()} fill="#3fc" />
-                    </ScatterChart>
-                </ResponsiveContainer>
-                <EventGenre events={this.state.events} />
+                    <ResponsiveContainer height={400}>
+                        <ScatterChart
+                            width={400}
+                            height={400}
+                            margin={{
+                                top: 20,
+                                right: 20,
+                                bottom: 20,
+                                left: 20,
+                            }}
+                        >
+                            <CartesianGrid />
+                            <XAxis
+                                type="category"
+                                dataKey="city"
+                                name="city"
+                                unit="cm"
+                            />
+                            <YAxis
+                                type="number"
+                                dataKey="number"
+                                name="number of events"
+                            />
+                            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+                            <Scatter data={this.getData()} fill="#3fc" />
+                        </ScatterChart>
+                    </ResponsiveContainer>
+                </div>
+                <div style={{ background: 'white', borderRadius: '20px' }}>
+                    <EventGenre events={this.state.events} />
+                </div>
                 <EventList events={this.state.events} />
                 <WelcomeScreen
                     showWelcomeScreen={this.state.showWelcomeScreen}
