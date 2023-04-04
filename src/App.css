@@ -21,10 +21,7 @@ h2{
 }
 
 ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -98,7 +95,7 @@ input[type="number"] {
   text-align: left;
   background: #fff;
   border-radius: 20px;
-  width:40%;
+  width:500px;
   border-radius: 4px;
   position: relative;
 }
