@@ -7,7 +7,14 @@ class EventList extends Component {
     render() {
         const { events } = this.props;
         return (
-            <div style={{ width: '100vw' }}>
+            <div
+                style={{
+                    width: '100vw',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+            >
                 <h2>Events</h2>
                 <ul className="EventList">
                     {events.map((event) => (
