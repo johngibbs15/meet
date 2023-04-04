@@ -7,7 +7,7 @@ class EventList extends Component {
     render() {
         const { events } = this.props;
         return (
-            <div>
+            <div style={{ width: '100vw' }}>
                 <h2>Events</h2>
                 <ul className="EventList">
                     {events.map((event) => (
