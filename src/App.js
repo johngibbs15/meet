@@ -112,12 +112,12 @@ class App extends Component {
                     updateEvents={this.updateEvents}
                 />
                 <NumberOfEvents updateEvents={this.updateEvents} />
-                <h4>Events in each city</h4>
+                <h2>Events in each city</h2>
                 <div
                     style={{
                         background: 'white',
                         borderRadius: '20px',
-                        margin: '5px 0',
+                        margin: '20px 0',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
