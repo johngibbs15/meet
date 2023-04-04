@@ -12,6 +12,10 @@ body{
   box-sizing: border-box;
 }
 
+h2{
+  margin-bottom: 5px 0;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -80,7 +84,7 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
-.event {
+.Event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
